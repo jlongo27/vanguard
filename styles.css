@@ -89,11 +89,25 @@ h1{
     position: relative;
 }
 
+@keyframes dropIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
 h2{
     font-size: 2rem;
     font-weight: bold;
     color: var(--white);
     padding-left: 1rem;
+    animation: dropIn 2.5s ease-out forwards;
+    
 }
 
 h3{
@@ -101,7 +115,9 @@ h3{
     font-weight: bold;
     color: var(--white); 
     padding:1rem 0 1rem 1rem;
+    animation: dropIn 1.5s ease-out forwards;
 }
+  
 
 p{
     font-family: var(--font);
@@ -131,17 +147,20 @@ p{
 
 #results{
     background-color: var(--blue);
+    color: var(--white);
     padding: 2rem;
+    
 }
 
 #results table{
     margin: 0 auto;
     border: 1px solid var(--charcoal);
     color: var(--white);
+    text-align: center;
 }
 
 #results th{
-    align-items: center;
+    text-align: center;
     padding: 1rem;
     font-weight: bold;
     border: 1px solid var(--charcoal);
@@ -166,10 +185,58 @@ p{
     padding: 2rem;
 }
 
-#footer{
+form {
+    padding-top: 2rem;
+    
+ }
+
+ form p {
+    margin-bottom: 1rem;
+  }
+  
+ 
+ label {
+    display: flex;
+    text-align: left;
+    margin-right: 8px;
+ }
+
+ input[type=text], input[type=email], textarea {
+    box-sizing: border-box; 
+    width: 100%;
+    padding: 12px;   
+    border: 2px solid var(--blue);
+
+ }
+
+ input[type=submit] {
+    width: 100%;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+ }
+
+ input[type=submit]:hover {
+    transform: scale(1.03, 1.03);
+    background-color: var(--red);
+
+ }
+
+footer{
     background-color: var(--black);
     color: var(--white);
     padding: 2rem;
+    text-align: center;
+}
+
+footer a{
+    color: var(--blue);
 }
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
@@ -177,12 +244,22 @@ p{
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto;   
+}
+
+#offer .container {
     background-color: var(--blue);
+    color: var(--white);
     padding: 1rem;
     border-radius: 8px;
-    color: var(--white);
 }
+
+#offer .container:hover {
+    transform: translateY(-10px);
+    
+}
+
+
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
  #hero{
@@ -223,7 +300,7 @@ h1::before  {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition:none;
+    transition: height 0.5s ease-in-out;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
