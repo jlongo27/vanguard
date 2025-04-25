@@ -69,15 +69,15 @@
 
         <section id="results">
             <h2>Proven Results</h2>
-            <p>ur data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.</p>
+            <p>Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.</p>
         
                 <h3>Profits</h3>
                 <table>
                     <thead>
                         <tr>
-                            <td>Year</td>
-                            <td>Revenue ($M)</td>
-                            <td>Growth (%)</td>
+                            <th>Year</th>
+                            <th>Revenue ($M)</th>
+                            <th>Growth (%)</th>
                         </tr>
                     </thead>
                     
@@ -126,26 +126,44 @@
                     </div>
         </section>
 
-        <section>
+        <section id="contact">
         <h2>Contact Us</h2>
         <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
 
-            Full Name
+        <form action="https://wp.zybooks.com/form-viewer.php" target="_blank" method="GET">
+            <p>
+               <label for="name">Full Name</label>
+               <input type="text" id="name" name="fullname">
+            </p>
+            <p>
+               <label for="email">Email Address</label>
+               <input type="email" id="email" name="email">
+            </p>
+            <p>
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company">
+            </p>
+            <p>
+                <label for="industry">Industry</label>
+                <input type="text" id="industry" name="industry">
+            </p>
 
-            Email Address
+            <p>
+                <label for="comments">How can we help you?</label>
+                <textarea name="comments" id="comments"></textarea>
+            </p>
+            
+           
+            <input type="submit" value="Submit">
+        </form> 
 
-            Company Name
-
-            Industry
-
-            How can we help you?
-
-            Submit
         </section>
     </main>
     <footer>
-        2025 Vanguard. All rights reserved. 
-        Email: info@vanguard.com 
-        Phone: 480.123.4567
+        <p>&copy; 2025 Vanguard. All rights reserved.</p> 
+        <p>Email: <a href="mailto:info@vanguard.com">info@vanguard.com</a></p>
+        <p>Phone: <a href="tel:5555555555">480.123.4567</a></p>
+
+        
     </footer>
 </body>
