@@ -1,7 +1,9 @@
-/* CSS BY YOUR NAME */
+/* CSS BY JOSE LONGO */
 
-/* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
+/* IMPORTED FONTS */
+/* IMPORT "INTER" FROM GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0..144;0..900;1..144;1..900&display=swap');
+
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -64,6 +66,111 @@ table {
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
+body{
+    min-width: 400px;
+    font-family: var(--font);
+    font-size: 1rem;
+    line-height: 1.5;  
+    background-color: var(--white); 
+}
+
+header{
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    
+}
+
+
+h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--blue);
+    position: relative;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+    padding-left: 1rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white); 
+    padding:1rem 0 1rem 1rem;
+}
+
+p{
+    font-family: var(--font);
+    font-size: 1rem;
+}
+
+#intro h2{
+    color: var(--black);
+    
+}
+
+#intro{
+    padding: 2rem 2rem 0 2rem;
+    
+}
+
+#offer h2{
+    color: var(--black); 
+}
+
+#offer{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    padding: 2rem; 
+}
+
+#results{
+    background-color: var(--blue);
+    padding: 2rem;
+}
+
+#results table{
+    margin: 0 auto;
+    border: 1px solid var(--charcoal);
+    color: var(--white);
+}
+
+#results th{
+    align-items: center;
+    padding: 1rem;
+    font-weight: bold;
+    border: 1px solid var(--charcoal);
+    background-color: var(--black);
+}
+
+#results td{
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--charcoal);
+    background-color: var(--black);
+    
+}
+
+#results .lighter td {
+    background-color: var(--charcoal);
+}
+
+#contact{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 2rem;
+}
+
+#footer{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 2rem;
+}
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
@@ -71,10 +178,14 @@ table {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: var(--blue);
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--white);
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- hero{
+ #hero{
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
@@ -85,9 +196,8 @@ table {
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+h1::before  {
     content: "";
-
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
@@ -113,7 +223,7 @@ table {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition:none;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
