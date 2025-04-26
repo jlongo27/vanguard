@@ -66,13 +66,16 @@ table {
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
-body{
+body {
     min-width: 400px;
+    width: 100%;
     font-family: var(--font);
     font-size: 1rem;
-    line-height: 1.5;  
-    background-color: var(--white); 
+    line-height: 1.5;
+    background-color: var(--white);
+    overflow-x: hidden;
 }
+
 
 header{
     background-color: var(--black);
@@ -103,15 +106,22 @@ nav {
     margin-left: 2rem;
   }
 
-nav ul {
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
     width: 100%;
-    margin:0;
-    padding:0;
-    list-style:none;
-    overflow:hidden;
-    text-align:right;
+    max-width: 100%;
+    background-color: var(--black);
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
     max-height: 0;
-  }
+    transition: max-height 0.3s ease;
+    z-index: 10;
+}
+
 
 nav h2 {
     visibility:hidden;
@@ -364,23 +374,6 @@ footer a{
 }
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
-@media screen and (min-width: 400px){
-    nav ul {
-      overflow:visible;
-      position:absolute;
-      top: 1.5rem;
-      left:.5rem;
-      display: grid;
-      grid-template-columns:1fr 1fr 1fr;
-    }
-    nav li a {
-      display:inline-block;
-  }
-    label span, nav input {
-      display:none;
-    }
-  }
-
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
@@ -524,6 +517,11 @@ h1::before  {
 /* MEDIA QUERIES (LARGE) */
 
 @media screen and (min-width: 1024px) {
+
+    .offer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     form {
         display: grid;
         grid-template-columns: 1fr 1fr;
