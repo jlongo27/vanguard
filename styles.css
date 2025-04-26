@@ -77,17 +77,120 @@ body{
 header{
     background-color: var(--black);
     display: flex;
+    padding: 2rem;
     align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 10px var(--blue);
+    position: relative;
     
 }
 
-
 h1{
-    position: relative;
     font-size: 2rem;
     font-weight: bold;
+    color: var(--blue);  
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+/* MOBILE NAVIGATION */
+
+nav {
+    margin-left: 2rem;
+  }
+
+nav ul {
+    width: 100%;
+    margin:0;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+    text-align:right;
+    max-height: 0;
+  }
+
+nav h2 {
+    visibility:hidden;
+    height:1px;
+  }
+
+nav li a {
+    display:block;
+    font-family:var(--font);
+    font-size:1.5rem;
+    padding:1rem;
+    text-transform:uppercase;
+    font-weight:bold;
+    text-decoration:none;
     color: var(--blue);
-    
+    transition: background-color .3s ease-in;
+  }
+
+  nav a:hover, nav input:hover {
+    background-color: var(--blue);
+    color: var(--black);
+}
+
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 2rem;
+    user-select: none;
+}
+
+label span {
+    background-color:var(--white);
+    display: block;
+    height: .25rem;
+    position: relative;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+}
+
+label span:before, label span:after {
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span:before {
+    top: .75rem;
+}
+
+label span:after {
+    top: -.75rem;
+}
+
+nav input[type=checkbox] {
+    display: none;
+}
+
+input:checked ~ ul {
+    max-height: 500px;
+}
+
+input:checked ~ label span {
+    background: transparent;
+}
+
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
 }
 
 @keyframes dropIn {
@@ -252,6 +355,23 @@ footer a{
     color: var(--blue);
 }
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+
+@media screen and (min-width: 400px){
+    nav ul {
+      overflow:visible;
+      position:absolute;
+      top: 1.5rem;
+      left:.5rem;
+      display: grid;
+      grid-template-columns:1fr 1fr 1fr;
+    }
+    nav li a {
+      display:inline-block;
+  }
+    label span, nav input {
+      display:none;
+    }
+  }
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
