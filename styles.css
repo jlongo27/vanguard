@@ -380,6 +380,11 @@ footer a{
     margin: 0 auto;   
 }
 
+.offer-container{
+    display: grid;
+    gap: 1rem;
+}
+
 #offer .container {
     background-color: var(--blue);
     color: var(--white);
@@ -462,10 +467,19 @@ h1::before  {
 
 /* MEDIA QUERIES (MEDIUM) */ 
 
-    #results {
+@media screen and (min-width: 800px){
+
+    .offer-container{
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    #results {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
     .results-container {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -475,6 +489,17 @@ h1::before  {
     .bar-chart {
         width: 50%;
     }
+}
 
 
 /* MEDIA QUERIES (LARGE) */
+
+@media screen and (min-width: 1024px){
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+}
+
