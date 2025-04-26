@@ -66,6 +66,10 @@ table {
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
+html {
+    min-width: 400px;
+}
+
 body {
     width: 100%;
     font-family: var(--font);
@@ -74,7 +78,6 @@ body {
     background-color: var(--white);
     overflow-x: hidden;
 }
-
 
 
 header{
