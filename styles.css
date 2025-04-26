@@ -228,7 +228,11 @@ p{
     font-size: 1rem;
 }
 
-#hero .hero-text {
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     color: var(--white);
     padding:24px;
     background-color: rgba(37, 34, 34, 0.3);
@@ -258,7 +262,7 @@ p{
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
-    padding: 2rem; 
+    padding: 2rem 2rem 4rem 2rem; 
 }
 
 #results{
@@ -325,6 +329,10 @@ form {
 
  }
 
+ textarea {
+    min-height: 100px;
+}
+
  input[type=submit] {
     width: 100%;
     background-color: var(--blue);
@@ -380,10 +388,12 @@ footer a{
     margin: 0 auto;   
 }
 
-.offer-container{
+.offer-container {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
+
 
 #offer .container {
     background-color: var(--blue);
@@ -489,17 +499,46 @@ h1::before  {
     .bar-chart {
         width: 50%;
     }
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+        align-items: center;
+        position: static; 
+        max-height: none;
+    }
+
+    nav li a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        font-size: 1.3rem;
+    }
+
+    nav label, nav input {
+        display: none;
+    }
 }
 
 
 /* MEDIA QUERIES (LARGE) */
 
-@media screen and (min-width: 1024px){
-    form{
+@media screen and (min-width: 1024px) {
+    form {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
 
+    #contact form input[type="submit"] {
+        grid-column: 2 / 3; 
+        width: 100%; 
+        font-size: 1.2rem;
+        padding: 12px;
+        margin-top: 0; 
+        align-self: start; 
+    }
 }
+
+
 
